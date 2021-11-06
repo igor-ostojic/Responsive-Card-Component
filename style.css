@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--Pale-blue);
+    font-family: 'Red Hat Display';
+}
+
+.background__image {
+    background: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    padding-top: 6rem;
+}
+
+.card__container {
+
+    margin: 0 auto;
+    background-color: white;
+    max-width: 450px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px  rgba(0,0,0,0.15);
+    
+}
+
+.wrapper {
+    padding: 3rem;
+}
+
+h2 {
+    font-weight: 900;
+    margin: 0 0 1.5rem 0;
+    color: var(--Dark-blue);
+    font-size: 1.4em;
+}
+
+.top__text p {
+    color: var(--Desaturated-blue);
+    margin-bottom: 2.5rem;
+    line-height: 1.7rem;
+}
+
+.top__text {
+    text-align: center;
+}
+
+.music__section {
+    background-color: var(--Very-pale-blue);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center; 
+}
+
+.music__section__text {
+    justify-self: flex-start;
+    font-size: 0.9rem;
+}
+
+.music__section span {
+
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+
+.music__section p {
+    color: var(--Desaturated-blue);
+}
+
+.music__section::before {
+content: url(images/icon-music.svg);
+justify-self: flex-start;
+margin-right: 1rem;
+
+}
+
+.music__section a {
+    justify-self: flex-end;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--Bright-blue);
+}
+
+.music__section a:hover {
+    
+    color: #766cf1;
+    text-decoration: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    
+}
+
+button {
+    font-weight: 700;
+    font-size: 17px;
+    border: none;
+   
+}
+
+.button__one {
+    background-color: var(--Bright-blue);
+    color: white;
+    padding: 15px 0px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 15px  rgba(0,0,0,0.1);
+}
+
+.button__one:hover {
+    background-color: #766cf1;
+    cursor: pointer;
+}
+
+.button__two {
+    color: var(--Desaturated-blue);
+    background-color: transparent;
+}
+
+.button__two:hover {
+    color: var(--Dark-blue);
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .background__image {
+        background: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+.card__container {
+
+    margin: 0 auto;
+    background-color: white;
+    max-width: 330px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px  rgba(0,0,0,0.15);
+    
+}
+
+.wrapper {
+    padding: 2rem;
+}
+
+}
